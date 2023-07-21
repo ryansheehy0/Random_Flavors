@@ -1,0 +1,75 @@
+:root{
+  /* Colors */
+  --light1: #fafafa;
+  --light2: #e6e6e6;
+  --light3: #c8c8c8;
+  --dark1: #1e1e1e;
+  /* Other settings */
+  --radius: 12px;
+  --height: 32px;
+}
+
+body{
+  background: var(--light1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav input{
+  border-radius: var(--radius);
+  flex: 2;
+  margin-left: 200px;
+  margin-right: 200px;
+  height: var(--height);
+  border: none;
+  box-shadow: 0 0 3px 0 var(--dark1);
+  background: var(--light2);
+  padding-left: 30px;
+  font-size: 1rem;
+}
+
+main {
+  display: flex;
+}
+
+.button{
+  height: var(--height);
+  border-radius: var(--radius);
+  background: var(--light2);
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 0 3px 0 var(--dark1);
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.favorites-container{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.favorites-container button{
+  width: fit-content;
+  margin: 10px;
+}
+
+.search-container{
+  margin: 30px;
+  display: flex; 
+  flex-direction: column;
+}
+
+.search-container button{
+  width: fit-content;
+  margin: 10px;
+  height: fit-content;
+  text-align: left;
+  padding: 10px;
+}
