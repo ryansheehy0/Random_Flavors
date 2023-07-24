@@ -1,10 +1,13 @@
 # Random Flavors
 
 ## Description
+An app to search for your favorite recipes and email two randomly chosen recipes from your favorites list.
 
 ## User Story
 AS A human who consumes food 
+
 I WANT to generate a list of recipes for the weekend
+
 SO THAT I can make my shopping and cooking easier on weekends.
 
 ## Minimum Viable Product

@@ -5,6 +5,7 @@
   --green: rgba(132, 136, 101, 0.9);
   --red: rgba(107, 40, 34, 0.9);
 
+
   /* Other settings */
   --radius: 12px;
   --height: 32px;
@@ -41,7 +42,7 @@ nav{
   outline: none;
 }
 
-#generate-random-recipes{
+#random-recipes{
   height: var(--height);
   border-radius: var(--radius);
   background: var(--green);
@@ -85,29 +86,40 @@ main {
   cursor: pointer;
 }
 
-.search-container{
+#search-container{
   flex: 9;
   margin: 30px;
-  display: flex; 
-  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.search-buttons{
+.recipe-container{
+  background: var(--light);
+  border: 2px solid var(--brown);
   margin: 10px;
-  height: fit-content;
-  text-align: left;
   padding: 10px;
   border-radius: var(--radius);
-  background: var(--green);
-  font-size: var(--font-size);
-  margin-right: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 2px solid var(--brown);
-  color: var(--brown);
-  margin: 10px;
+  position: relative;
+  width: 312px;
   cursor: pointer;
 }
+
+.recipe-container > .bi{
+  position: absolute;
+}
+
+.recipe-container > h2{
+  margin: 0;
+  text-align: left;
+  margin-left: 30px;
+  width: calc(100% - 30px - 20px);
+}
+
+.recipe-container > img{
+  border-radius: var(--radius);
+}
+
+
 
 .bi{
   background: var(--red);

@@ -1,48 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head> <!-- Contains metadata -->
-        <title>Title</title>
+        <title>Random Flavors</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
         <link rel="stylesheet" type="text/css" href="./style.css" />
+        <!-- JS -->
+        <script src="script.js" defer></script>
     </head>
     <body> <!-- Contains the visible content -->
       <nav>
-        <input type="text" placeholder="Search" id="search">
-        <button class="button" id="generate-random-recipes">Generate random recipes</button>
+        <input id="search" type="text" placeholder="Search">
+        <button id="random-recipes">Random Recipes</button>
       </nav>
       <main>
-        <div class="favorites-container">
-          <h1>Favorites</h1>
+        <div id="favorites">
+          <h2>Favorites</h2>
           <button class="favorite-buttons">
-            <i class="bi bi-trash"></i>
+            <i class="mdi mdi-delete is-size-3"></i>
             Recipe 1
           </button>
           <button class="favorite-buttons">
-            <i class="bi bi-trash"></i>
+            <i class="mdi mdi-delete is-size-3"></i>
             Recipe 2
           </button>
         </div>
-        <div class="search-container">
-          <button class="search-buttons">
-            <i class="bi bi-plus"></i>
-            Searched Recipe 1
-            <p>&emsp;This is a description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </button>
-
-          <button class="search-buttons">
-            <i class="bi bi-plus"></i>
-            Searched Recipe 2
-            <p>&emsp;This is a description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </button>
-
-          <button class="search-buttons">
-            <i class="bi bi-plus"></i>
-            Searched Recipe 3
-            <p>&emsp;This is a description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </button>
-        </div>
+        <div id="search-container"></div>
       </main>
     </body>
 </html>
