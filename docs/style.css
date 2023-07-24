@@ -5,125 +5,159 @@
   --green: rgba(132, 136, 101, 0.9);
   --red: rgba(107, 40, 34, 0.9);
 
-
   /* Other settings */
   --radius: 12px;
-  --height: 32px;
+  --height: 36px;
   --font-size: 1.3rem;
+  --space-between: 30px; /* Space between different boxes */
+  --space-inside: 10px; /* Space inside the boxes */
 }
 
 body{
-  background-image: url("./assets/background_img.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  font-family: Arial, Helvetica, sans-serif;
+  /* Background: */
+    background-image: url("./assets/background_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  /* Font */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  /* Padding */
+    padding-top: var(--space-between);
+    padding-bottom: var(--space-between);
 }
 #search{
   flex: 2;
-  margin-left: 200px;
-  margin-right: 200px;
-  height: var(--height);
-  background: var(--light);
-  padding-left: 30px;
-  font-size: var(--font-size);
+  /* Spacing */
+    margin-left: var(--space-between);
+    margin-right: var(--space-between);
+  /* Text stuff */
+    padding-left: 30px; /* Move the text to the right a bit */
+    font-size: var(--font-size);
+  /* Colors */
+    background: var(--light);
+    color: var(--brown);
+  /* Sizing */
+    box-sizing: border-box;
+    height: var(--height);
+    padding-top: 0;
+    padding-bottom: 0;
   /* Border */
     border: 2px solid var(--brown);
     border-radius: var(--radius);
-  color: var(--brown);
 }
 #search:focus{
   outline: none;
 }
 
 #random-recipes{
-  height: var(--height);
-  border-radius: var(--radius);
-  background: var(--green);
-  font-size: var(--font-size);
-  margin-right: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 2px solid var(--brown);
-  color: var(--brown);
-  cursor: pointer;
+  /* Color */
+    color: var(--brown);
+    background: var(--green);
+  /* Border */
+    border-radius: var(--radius);
+    border: 2px solid var(--brown);
+  /* Sizing */
+    height: var(--height);
+  /* Text and cursor */
+    font-size: var(--font-size);
+    cursor: pointer;
+  /* Spacing */
+    margin-right: var(--space-between);
+    padding-left: var(--space-inside);
+    padding-right: var(--space-inside);
 }
 
 main {
   display: flex;
 }
 
-
-.favorites-container{
-  margin: 30px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  border: 2px solid var(--brown);
-  border-radius: var(--radius);
-  padding: 10px;
-  background: var(--light);
-  color: var(--brown);
+#favorite-container{
+  /* Spacing */
+    margin: var(--space-between);
+    padding: var(--space-inside);
+  /* Flex */
+    display: flex;
+    flex-direction: column;
+  /* Border */
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+  /* Colors */
+    background: var(--light);
+    color: var(--brown);
+  /* Size */
+    height: fit-content;
+    width: fit-content;
+}
+#favorite-title{
+  margin-top: var(--space-inside);
+  margin-bottom: var(--space-inside);
 }
 .favorite-buttons{
-  height: var(--height);
-  border-radius: var(--radius);
-  background: var(--green);
-  font-size: var(--font-size);
-  margin-right: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 2px solid var(--brown);
-  color: var(--brown);
-  width: fit-content;
-  margin: 10px;
-  cursor: pointer;
+  /* Color */
+    color: var(--brown);
+    background: var(--green);
+  /* Sizing */
+    width: fit-content;
+    height: var(--height);
+  /* Border */
+    border-radius: var(--radius);
+    border: 2px solid var(--brown);
+  /* Text and cursor */
+    cursor: pointer;
+    font-size: var(--font-size);
+    white-space: nowrap;
+  /* Spacing */ 
+    padding-left: var(--space-inside);
+    padding-right: var(--space-inside);
+    margin: var(--space-inside);
 }
 
 #search-container{
-  flex: 9;
-  margin: 30px;
+  margin: var(--space-between);
   display: flex;
   flex-wrap: wrap;
+  /* Used to align vertically with favorites card */
+    position: relative;
+      top: calc(-1 * var(--space-inside));
 }
 
 .recipe-container{
-  background: var(--light);
-  border: 2px solid var(--brown);
-  margin: 10px;
-  padding: 10px;
-  border-radius: var(--radius);
-  position: relative;
-  width: 312px;
+  /* Color */
+    background: var(--light);
+    color: var(--brown);
+  /* Border */
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+  /* Spacing */
+    margin: var(--space-inside);
+    padding: var(--space-inside);
+  /* Sizing */
+    width: 312px;
   cursor: pointer;
+  position: relative;
 }
 
-.recipe-container > .bi{
+.recipe-container > .mdi{
   position: absolute;
+  font-size: 1.6rem;
 }
 
 .recipe-container > h2{
   margin: 0;
   text-align: left;
-  margin-left: 30px;
-  width: calc(100% - 30px - 20px);
+  /* Allows spacing for add to list icon */
+    margin-left: 30px;
+    width: calc(100% - 30px - 2 * var(--space-inside));
 }
 
 .recipe-container > img{
   border-radius: var(--radius);
-}
-
-
-
-.bi{
-  background: var(--red);
-  color: var(--green);
-  font-size: var(--font-size);
-  border-radius: 3px;
+  margin-top: var(--space-inside);
 }
