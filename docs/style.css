@@ -11,6 +11,7 @@
   --font-size: 1.3rem;
   --space-between: 30px; /* Space between different boxes */
   --space-inside: 10px; /* Space inside the boxes */
+  --input-left-padding: 30px;
 }
 
 body{
@@ -38,7 +39,7 @@ nav{
     margin-left: var(--space-between);
     margin-right: var(--space-between);
   /* Text stuff */
-    padding-left: 30px; /* Move the text to the right a bit */
+    padding-left: var(--input-left-padding); /* Move the text to the right a bit */
     font-size: var(--font-size);
   /* Colors */
     background: var(--light);
@@ -167,3 +168,59 @@ main {
   /* Center delete modal */
     /* Top, left, transform: translate() */
   /* Other styling */
+
+#random-recipes-modal{
+  /* Center on screen */
+    position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  /* Color */
+    background: var(--light);
+    color: var(--brown);
+  /* Border */
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+  /* Spacing */
+    padding: var(--space-inside);
+}
+
+#random-recipes-modal > .icon{
+  position: absolute;
+    right: var(--space-inside);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#random-recipes-modal > .title{
+  padding-right: 30px; 
+  margin: 0;
+}
+
+#random-recipes-modal > #email{
+  /* Text stuff */
+    font-size: var(--font-size);
+  padding-left: var(--input-left-padding); 
+  /* Colors */
+    background: var(--light);
+  /* Borders */
+    border-radius: var(--radius);
+    border: 2px solid var(--brown);
+  /* Sizing */
+    box-sizing: border-box;
+    height: var(--height);
+
+}
+#random-recipes-modal > #email:focus{
+  outline: none;
+}
+
+#random-recipes-modal > #send{
+  /* Colors */
+    background: var(--green);
+  /* Border */
+    border: 2px solid var(--brown);
+  /* Sizing */
+    height: var(--height);
+
+}
