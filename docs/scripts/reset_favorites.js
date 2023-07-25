@@ -1,7 +1,7 @@
 const resetFavorites = () => {
   const favoritesContainer = document.querySelector("#favorite-container")
   // Reset the favorites list
-    favoritesContainer.innerHTML = ""
+    favoritesContainer.innerHTML = `<h2 id="favorite-title">Favorites</h2>`
   // Add each of the favorites to the favorites list
     window.favorites.forEach(favorite => {
       // Id has "a" in front because querySelector needs a letter to start with
