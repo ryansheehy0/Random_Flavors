@@ -161,3 +161,9 @@ main {
   border-radius: var(--radius);
   margin-top: var(--space-inside);
 }
+
+/* Delete modal CSS */
+  /* Position: fixed */
+  /* Center delete modal */
+    /* Top, left, transform: translate() */
+  /* Other styling */

@@ -11,7 +11,11 @@ const resetFavorites = () => {
           ${favorite.name}
         </button>
       `)
-    })
+      // Get the newly created favorites button
+      // Add event listener on trash icon
+        // Show the delete modal. visibility: show
+        // Prevent clicking on background. bodyContainer.style.pointerEvents = "none" // Don't allow clicking the background
+   })
 }
 
 // Exporting
