@@ -144,12 +144,12 @@ main {
   position: relative;
 }
 
-.recipe-container > .mdi{
+.recipe-container > .icon{
   position: absolute;
   font-size: 1.6rem;
 }
 
-.recipe-container > h2{
+.recipe-container > .name{
   margin: 0;
   text-align: left;
   /* Allows spacing for add to list icon */

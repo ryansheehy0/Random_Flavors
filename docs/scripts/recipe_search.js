@@ -9,13 +9,18 @@ const search = async (searchTerm, apiKey) => {
       const name = recipe.title
       const img = recipe.image
       const id = recipe.id
+      // Id has "a" in front because querySelector needs a letter to start with
       searchContainer.insertAdjacentHTML("beforeend"/*Last Child*/, `
-        <div class="recipe-container" id="${id}">
-          <i class="mdi mdi-playlist-plus"></i>
-          <h2>${name}</h2>
+        <div class="recipe-container" id="a${id}">
+          <i class="icon mdi mdi-playlist-plus"></i>
+          <h2 class="name">${name}</h2>
           <img src="${img}" alt="${name} image">
         </div>
       `)
+      // Get newly created recipe container
+        const recipeContainer = document.querySelector(`#a${id}`)
+      // Make event listener for adding to favorites list icon button
+        window.add_to_list.favoritesListener(recipeContainer)
     })
   })
   .catch(error => {
