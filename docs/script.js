@@ -4,6 +4,9 @@ const recipe_search = window.recipe_search
 
 const apiKey = "6f95dd3a57c24cb6af74c79f296655c2" //spoonacular
 
+// Set random recipes event listeners
+window.random_recipes.randomRecipeInit()
+
 // Setting favorites list
   // Get the favorites from the local storage
   window.favorites = JSON.parse(localStorage.getItem("favorites"))
