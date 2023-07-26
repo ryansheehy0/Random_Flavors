@@ -1,9 +1,8 @@
 :root{
   /* Colors */
-  --light: rgba(221, 204, 160, 0.9);
+  --light: rgba(221, 204, 160, 1);
   --brown: rgba(45, 44, 49, 1);
-  --green: rgba(132, 136, 101, 0.9);
-  --red: rgba(107, 40, 34, 0.9);
+  --green: rgba(132, 136, 101, 1);
 
   /* Other settings */
   --radius: 12px;
@@ -162,12 +161,6 @@ main {
   margin-top: var(--space-inside);
 }
 
-/* Delete modal CSS */
-  /* Position: fixed */
-  /* Center delete modal */
-    /* Top, left, transform: translate() */
-  /* Other styling */
-
 #random-recipes-modal{
   /* Center on screen */
     position: fixed;
@@ -253,4 +246,5 @@ main {
     height: var(--height);
   /* Text */
     font-size: var(--font-size);
+    cursor: pointer;
 }
