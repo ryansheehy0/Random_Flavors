@@ -167,3 +167,90 @@ main {
   /* Center delete modal */
     /* Top, left, transform: translate() */
   /* Other styling */
+
+#random-recipes-modal{
+  /* Center on screen */
+    position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  /* Color */
+    background: var(--light);
+    color: var(--brown);
+  /* Border */
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+  /* Spacing */
+    padding: var(--space-inside);
+}
+
+#random-recipes-modal > .icon{
+  position: absolute;
+    right: var(--space-inside);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#random-recipes-modal > .title{
+  padding-right: 30px; 
+  margin: 0;
+}
+
+#random-recipes-modal > #random-recipes-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#random-recipes-modal .random-recipes-buttons{
+  /* Color */
+    color: var(--brown);
+    background: var(--green);
+  /* Sizing */
+    width: fit-content;
+    height: var(--height);
+  /* Border */
+    border-radius: var(--radius);
+    border: 2px solid var(--brown);
+  /* Text and cursor */
+    cursor: pointer;
+    font-size: var(--font-size);
+    white-space: nowrap;
+  /* Spacing */ 
+    padding-left: var(--space-inside);
+    padding-right: var(--space-inside);
+    margin-top: var(--space-inside);
+}
+
+#random-recipes-modal > #email{
+  /* Text stuff */
+    font-size: var(--font-size);
+    padding-left: 10px; 
+  /* Colors */
+    background: var(--light);
+    color: var(--brown);
+  /* Borders */
+    border-radius: var(--radius);
+    border: 2px solid var(--brown);
+  /* Sizing */
+    box-sizing: border-box;
+    height: var(--height);
+    width: 350px;
+  /* Spacing */
+    margin-top: var(--space-inside);
+}
+#random-recipes-modal > #email:focus{
+  outline: none;
+}
+
+#random-recipes-modal > #send{
+  /* Colors */
+    background: var(--green);
+    color: var(--brown);
+  /* Border */
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+  /* Sizing */
+    height: var(--height);
+  /* Text */
+    font-size: var(--font-size);
+}
