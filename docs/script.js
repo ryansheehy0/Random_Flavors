@@ -1,8 +1,4 @@
-const apiKey = "6f95dd3a57c24cb6af74c79f296655c2" //spoonacular
-
-// Inits
-  // Set random recipes button and modal event listeners
-    window.random_recipes.randomRecipeInit()
+const spoonacularApiKey = "6f95dd3a57c24cb6af74c79f296655c2"
 
 // Setting favorites list
   // Get the favorites from the local storage
@@ -10,6 +6,10 @@ const apiKey = "6f95dd3a57c24cb6af74c79f296655c2" //spoonacular
   if(favorites === null){// Nothing in local storage
     favorites = []
   }
-  window.reset_favorites.resetFavorites()
+  window.populateFavorites()
 
-window.recipe_search.search("pasta", apiKey)
+// Inits
+  // Set random recipes button and modal event listeners
+    window.randomRecipeInit()
+  // Allow searching in the search bar
+    window.searchBarInit(spoonacularApiKey)

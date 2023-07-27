@@ -8,27 +8,30 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"><!-- Icons -->
         <link rel="stylesheet" type="text/css" href="./style.css" />
         <!-- JS -->
-          <script src="scripts/random_recipes.js" defer></script>
-          <script src="scripts/send_email.js" defer></script>
-          <script src="scripts/delete_from_list.js" defer></script>
-          <script src="scripts/recipe_info.js" defer></script>
-              <script src="scripts/reset_favorites.js" defer></script>
-            <script src="scripts/add_to_list.js" defer></script>
-          <script src="scripts/recipe_search.js" defer></script>
+          <script src="./scripts/inits/delete_from_favorites.js" defer></script>
+        <script src="./scripts/utils/populate_favorites.js" defer></script>
+        <script src="./scripts/inits/random_recipes_init.js" defer></script>
+          <script src="./scripts/apis/get_recipe_search.js" defer></script>
+          <script src="./scripts/inits/add_to_favorites_click_init.js" defer></script>
+        <script src="./scripts/inits/search_bar_init.js" defer></script>
+
         <script src="script.js" defer></script>
     </head>
     <body> <!-- Contains the visible content -->
-      <nav>
-        <input id="search" type="text" placeholder="Search">
-        <button id="random-recipes">Random Recipes</button>
-      </nav>
-      <main>
-        <div id="favorite-container">
-          <h2 id="favorite-title">Favorites</h2>
-        </div>
-        <div id="search-container"></div>
-      </main>
+      <div id="body-container">
+        <nav>
+          <input id="search" type="text" placeholder="Search">
+          <button id="random-recipes">Random Recipes</button>
+        </nav>
+        <main>
+          <div id="favorite-container">
+            <h2 id="favorite-title">Favorites</h2>
+          </div>
+          <div id="search-container"></div>
+        </main>
+      </div>
       <!-- Modals -->
+        <div id="background" style="visibility: hidden;"></div>
         <!-- Delete Modal HTML style="visibility: hidden"-->
         <!-- Random Recipes -->
           <div id="random-recipes-modal" style="visibility: hidden;">
@@ -38,7 +41,7 @@
             <input id="email" type="email" placeholder="Enter you email" required>
             <button id="send">Send</button>
           </div>
-          <!-- Recipe Description Modal -->
+        <!-- Recipe Description Modal -->
           <div id="recipe-modal" style="visibility: hidden"></div>
     </body>
 </html>

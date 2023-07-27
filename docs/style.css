@@ -175,6 +175,8 @@ main {
     border-radius: var(--radius);
   /* Spacing */
     padding: var(--space-inside);
+  /* Moving above background */
+    z-index: 2;
 }
 
 #random-recipes-modal > .icon{
@@ -247,4 +249,14 @@ main {
   /* Text */
     font-size: var(--font-size);
     cursor: pointer;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+    top: 0;
+    left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
 }

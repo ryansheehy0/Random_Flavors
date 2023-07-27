@@ -1,9 +1,11 @@
-const randomRecipeInit = () => {
+window.randomRecipeInit = () => {
   // Get the dom elements
     const randomRecipesBtn = document.querySelector("#random-recipes")
     const randomRecipesModal = document.querySelector("#random-recipes-modal")
     const randomRecipesModalCloseIcon = randomRecipesModal.querySelector(".mdi-close")
     const randomRecipesContainer = randomRecipesModal.querySelector("#random-recipes-container")
+    const background = document.querySelector("#background")
+    const bodyContainer = document.querySelector("#body-container")
   // When Random Recipes Button is pressed
   randomRecipesBtn.addEventListener("click", () => {
     // Variables
@@ -23,11 +25,17 @@ const randomRecipeInit = () => {
     // Add the randomly chosen recipes to random recipes container
     randomRecipes.forEach(recipe => {
       randomRecipesContainer.insertAdjacentHTML("beforeend" /* Last Child */, `
-        <button class="random-recipes-buttons" id="a${recipe.id}">
+        <button class="random-recipes-buttons" data-recipeid="${recipe.id}">
           ${recipe.name}
         </button>
       `)
     })
+
+    // Blur the background
+      background.style.visibility = "visible"
+
+    // Prevent clicking on the background
+      bodyContainer.style.pointerEvents = "none"
 
     // Show the modal
       randomRecipesModal.style.visibility = "visible"
@@ -35,13 +43,13 @@ const randomRecipeInit = () => {
 
   // When the close button is pressed in the random recipes modal
   randomRecipesModalCloseIcon.addEventListener("click", () => {
-    randomRecipesModal.style.visibility = "hidden"
+    // Hide the background
+      background.style.visibility = "hidden"
+    // Hide the modal
+      randomRecipesModal.style.visibility = "hidden"
+    // Allow clicking in the background
+      bodyContainer.style.pointerEvents = "auto"
     // Remove the randomly chosen recipes
       randomRecipesContainer.innerHTML = ""
   })
-}
-
-// Exporting
-window.random_recipes = {
-  randomRecipeInit
 }
