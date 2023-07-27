@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"><!-- Icons -->
         <link rel="stylesheet" type="text/css" href="./style.css" />
         <!-- JS -->
+            <script src="./scripts/apis/get_recipe_info.js" defer></script>
+          <script src="./scripts/utils/recipe_description/show_recipe_description.js" defer></script>
+          <script src="./scripts/utils/recipe_description/hide_recipe_description.js" defer></script>
+
           <script src="./scripts/inits/delete_from_favorites.js" defer></script>
         <script src="./scripts/utils/populate_favorites.js" defer></script>
         <script src="./scripts/inits/random_recipes_init.js" defer></script>
@@ -32,7 +36,6 @@
       </div>
       <!-- Modals -->
         <div id="background" style="visibility: hidden;"></div>
-        <!-- Delete Modal HTML style="visibility: hidden"-->
         <!-- Random Recipes -->
           <div id="random-recipes-modal" style="visibility: hidden;">
             <i class="icon mdi mdi-close"></i>

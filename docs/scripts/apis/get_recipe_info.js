@@ -1,8 +1,5 @@
 window.getRecipeInfo = async (recipeID, recipeName, apiKey) => {
   return new Promise((resolve, reject) => {
-    // Remove the "a" in front of the id
-      recipeID = recipeID.slice(1)
-
     fetch(`https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=${apiKey}`)
     .then(response => response.json())
     .then(data => {
@@ -34,7 +31,7 @@ window.getRecipeInfo = async (recipeID, recipeName, apiKey) => {
       resolve(recipe)
     })
     .catch(error => {
-        reject(error)
+      reject(error)
     })
   })
 }

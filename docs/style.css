@@ -252,11 +252,58 @@ main {
 }
 
 #background {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-    top: 0;
-    left: 0;
-  z-index: 1;
+  /* Sizing */
+    width: 100vw;
+    height: 100vh;
+  /* Positioning */
+    position: fixed;
+      top: 0;
+      left: 0;
+  /* Move above background stuff */
+    z-index: 1;
+  /* Shadow effect on background */
   background: rgba(0, 0, 0, 0.5);
+}
+
+#recipe-modal{
+  /* Positioning */
+    position: fixed; 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  /* Coloring */
+    background: var(--light);
+    color: var(--brown);
+  /* Border */
+    border: 2px solid var(--brown);
+    border-radius: var(--radius);
+  /* Spacing */
+    padding: var(--space-inside);
+  /* Sizing */
+    height: fit-content;
+    max-height: 70vh;
+  /* Overflow */
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+  /* Text */
+    font-size: var(--font-size);
+}
+
+#recipe-modal > .mdi-close{
+  position: absolute;
+    right: var(--space-inside);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#recipe-modal > li {
+  list-style: none;
+}
+
+#recipe-modal > img{
+  /* Center image */
+    position: relative;
+      left: 50%;
+    transform: translateX(-50%);
+  border-radius: var(--radius);
 }
