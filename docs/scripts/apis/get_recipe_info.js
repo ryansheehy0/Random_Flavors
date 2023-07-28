@@ -1,6 +1,6 @@
-window.getRecipeInfo = async (recipeID, recipeName, apiKey) => {
+window.getRecipeInfo = async (recipeID, recipeName) => {
   return new Promise((resolve, reject) => {
-    fetch(`https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=${apiKey}`)
+    fetch(`https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=${window.spoonacularApiKey}`)
     .then(response => response.json())
     .then(data => {
       const recipe = {

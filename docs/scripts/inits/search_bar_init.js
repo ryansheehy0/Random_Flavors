@@ -1,4 +1,4 @@
-window.searchBarInit = (apiKey) => {
+window.searchBarInit = () => {
   // Get dom elements
     const searchBar = document.querySelector("#search")
     const searchContainer = document.querySelector("#search-container")
@@ -16,7 +16,7 @@ window.searchBarInit = (apiKey) => {
         return
       }
     // Wait for the recipes from the search
-      const recipes = await window.getRecipeSearch(searchTerm, apiKey)
+      const recipes = await window.getRecipeSearch(searchTerm)
     // Check to see if there are recipes
       if(recipes.length === 0){
         console.log("No recipes from search")
@@ -41,6 +41,10 @@ window.searchBarInit = (apiKey) => {
           const recipeContainer = document.querySelector(`.recipe-container[data-recipeid="${recipeid}"]`)
         // Make event listener for adding to favorites list icon button
           window.addToFavoritesClickInit(recipeContainer)
+        // Recipe description
+          recipeContainer.addEventListener("click", () => {
+            window.showRecipeDescription(recipeid, name)
+          })
       })
       })
 }

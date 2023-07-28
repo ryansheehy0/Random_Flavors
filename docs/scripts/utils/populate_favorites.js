@@ -14,5 +14,9 @@ window.populateFavorites = () => {
         const favoriteButton = document.querySelector(`.favorite-buttons[data-recipeid="${favorite.id}"]`)
       // Add event listener for the delete icon/button
         window.deleteFromFavorites(favoriteButton)
+      // Recipe description
+        favoriteButton.addEventListener("click", () => {
+          window.showRecipeDescription(favorite.id, favorite.name) 
+        })
    })
 }

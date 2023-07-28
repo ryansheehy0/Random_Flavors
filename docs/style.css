@@ -196,26 +196,6 @@ main {
   flex-direction: column;
 }
 
-#random-recipes-modal .random-recipes-buttons{
-  /* Color */
-    color: var(--brown);
-    background: var(--green);
-  /* Sizing */
-    width: fit-content;
-    height: var(--height);
-  /* Border */
-    border-radius: var(--radius);
-    border: 2px solid var(--brown);
-  /* Text and cursor */
-    cursor: pointer;
-    font-size: var(--font-size);
-    white-space: nowrap;
-  /* Spacing */ 
-    padding-left: var(--space-inside);
-    padding-right: var(--space-inside);
-    margin-top: var(--space-inside);
-}
-
 #random-recipes-modal > #email{
   /* Text stuff */
     font-size: var(--font-size);
@@ -235,6 +215,11 @@ main {
 }
 #random-recipes-modal > #email:focus{
   outline: none;
+}
+
+#random-recipes-container > h3{
+  margin-top: calc(var(--space-inside) / 2);
+  margin-bottom: calc(var(--space-inside) / 2);
 }
 
 #random-recipes-modal > #send{
@@ -287,6 +272,7 @@ main {
     scrollbar-color: transparent transparent;
   /* Text */
     font-size: var(--font-size);
+  z-index: 2;
 }
 
 #recipe-modal > .mdi-close{

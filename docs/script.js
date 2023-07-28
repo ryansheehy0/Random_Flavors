@@ -1,4 +1,5 @@
-const spoonacularApiKey = "6f95dd3a57c24cb6af74c79f296655c2"
+window.spoonacularApiKey = "6f95dd3a57c24cb6af74c79f296655c2"
+window.emailApiKey = ""
 
 // Setting favorites list
   // Get the favorites from the local storage
@@ -12,4 +13,4 @@ const spoonacularApiKey = "6f95dd3a57c24cb6af74c79f296655c2"
   // Set random recipes button and modal event listeners
     window.randomRecipeInit()
   // Allow searching in the search bar
-    window.searchBarInit(spoonacularApiKey)
+    window.searchBarInit()

@@ -1,9 +1,11 @@
-window.showRecipeDescription = async (recipeID, recipeName, apiKey) => {
+window.showRecipeDescription = async (recipeid, recipeName) => {
   // Get dom elements
     const recipeModal = document.querySelector("#recipe-modal")
+    const background = document.querySelector("#background")
+    const bodyContainer = document.querySelector("#body-container")
 
   // Get info about the recipe
-    const recipeInfo = await window.getRecipeInfo(recipeID, recipeName, apiKey)
+    const recipeInfo = await window.getRecipeInfo(recipeid, recipeName)
 
   // Populate the modal with the recipe info
     // Title and close icon
@@ -11,6 +13,9 @@ window.showRecipeDescription = async (recipeID, recipeName, apiKey) => {
         <i class="icon mdi mdi-close"></i>
         <h1 class="title">${recipeName}</h1>
       `
+    // Get the newly created icon
+    const closeIcon = recipeModal.querySelector(".mdi-close")
+
     // Link
       if(recipeInfo.link !== ""){
         recipeModal.insertAdjacentHTML("beforeend" /* Last Child */, `
@@ -73,6 +78,22 @@ window.showRecipeDescription = async (recipeID, recipeName, apiKey) => {
             `)
           })
       }
+
+  // Blur the background
+    background.style.visibility = "visible"
+
+  // Prevent clicking on the background
+    bodyContainer.style.pointerEvents = "none"
+
+  // add event listener to the icon element
+    closeIcon.addEventListener("click", () => {
+      // Hide the background
+        background.style.visibility = "hidden"
+      // Allow clicking on the background
+        bodyContainer.style.pointerEvents = "auto"
+      // Hide modal
+        recipeModal.style.visibility = "hidden"
+    })
 
   // Show modal
     recipeModal.style.visibility = "visible"

@@ -25,9 +25,9 @@ window.randomRecipeInit = () => {
     // Add the randomly chosen recipes to random recipes container
     randomRecipes.forEach(recipe => {
       randomRecipesContainer.insertAdjacentHTML("beforeend" /* Last Child */, `
-        <button class="random-recipes-buttons" data-recipeid="${recipe.id}">
+        <h3 data-recipeid="${recipe.id}">
           ${recipe.name}
-        </button>
+        </h3>
       `)
     })
 

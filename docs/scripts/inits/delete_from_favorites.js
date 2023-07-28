@@ -2,7 +2,9 @@ window.deleteFromFavorites = (favoriteButton) => {
   // Get dom elements
     const deleteIcon = favoriteButton.querySelector(".mdi-delete")
 
-  deleteIcon.addEventListener("click", () => {
+  deleteIcon.addEventListener("click", (event) => {
+    // Prevent the delete from propagating to the button
+      event.stopPropagation() 
     // Get the index from favorites list of the thing we want to delete
       // Get the id of the favorites recipe button we want to delete
         const recipeid = favoriteButton.dataset.recipeid
