@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./dist/output.css" rel="stylesheet"> 
+  <script src="scripts/send_email.js" defer></script>
+  <script src="scripts/delete_from_list.js" defer></script>
+  <script src="scripts/recipe_info.js" defer></script>
+  <script src="scripts/reset_favorites.js" defer></script>
+  <script src="scripts/add_to_list.js" defer></script>
+  <script src="scripts/recipe_search.js" defer></script>
+  <script src="script.js" defer></script>
+  <style>
+  .bg-light {
+    background-color: rgba(221, 204, 160, 0.9);
+  }
+
+  .text-brown {
+    color: rgba(45, 44, 49, 1);
+  }
+
+  .bg-green {
+    background-color: rgba(132, 136, 101, 0.9);
+  }
+
+  .border-brown {
+    border-color: rgba(45, 44, 49, 1);
+  }
+
+  .rounded-radius {
+    border-radius: 12px;
+  }
+
+  .h-36 {
+    height: 36px;
+  }
+
+  .text-base {
+    font-size: 1.3rem;
+  }
+
+  .px-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .mx-30 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .mx-6 {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .w-312 {
+    width: 312px;
+  }
+
+  .top-n30 {
+    top: -30px;
+  }
+
+  .text-1rem {
+    font-size: 1.6rem;
+  }
+
+  .mt-10 {
+    margin-top: 10px;
+  }
+
+  .mt-4 {
+    margin-top: 4px;
+  }
+
+  .mb-4 {
+    margin-bottom: 4px;
+  }
+
+  .ml-30 {
+    margin-left: 30px;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .mt-6 {
+    margin-top: 6px;
+  }
+
+  .ml-8 {
+    margin-left: 8px;
+  }
+
+  .bg-center {
+    background-position: center;
+  }
+
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+
+  .bg-cover {
+    background-size: cover;
+  }
+</style>
+  <title>Document</title>
+</head>
+<body class="bg-center bg-no-repeat bg-cover" style="background-image: url('./assets/background_img.jpg')">
+  <nav class="flex items-center justify-center py-6">
+    <input id="search" type="text" placeholder="Search"
+      class="flex-1 px-4 mx-6 text-base border-2 rounded bg-light text-brown border-brown" />
+    <button id="random-recipes"
+      class="px-4 text-base border-2 rounded cursor-pointer text-brown bg-green border-brown">
+      Random Recipes
+    </button>
+  </nav>
+  <main class="flex justify-center mt-6">
+    <div id="favorite-container"
+      class="flex flex-col px-4 py-4 mx-6 border-2 rounded border-brown bg-light text-brown">
+      <h2 id="favorite-title" class="mt-4 mb-4">Favorites</h2>
+    </div>
+    <div id="search-container" class="flex flex-wrap mt-6">
+      <!-- Placeholder for the recipe-container -->
+    </div>
+  </main>
+  <!-- Delete Modal HTML style="visibility: hidden"-->
+</body>
+</body>
+</html>
