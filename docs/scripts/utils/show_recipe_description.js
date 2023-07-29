@@ -1,4 +1,4 @@
-window.showRecipeDescription = async (recipeid, recipeName) => {
+window.showRecipeDescription = async (recipeid, recipeName, hideBackground) => {
   // Get dom elements
     const recipeModal = document.querySelector("#recipe-modal")
     const background = document.querySelector("#background")
@@ -87,10 +87,12 @@ window.showRecipeDescription = async (recipeid, recipeName) => {
 
   // add event listener to the icon element
     closeIcon.addEventListener("click", () => {
-      // Hide the background
-        background.style.visibility = "hidden"
-      // Allow clicking on the background
-        bodyContainer.style.pointerEvents = "auto"
+      if(hideBackground){
+        // Hide the background
+          background.style.visibility = "hidden"
+        // Allow clicking on the background
+          bodyContainer.style.pointerEvents = "auto"
+      }
       // Hide modal
         recipeModal.style.visibility = "hidden"
     })

@@ -43,7 +43,7 @@ window.searchBarInit = () => {
           window.addToFavoritesClickInit(recipeContainer)
         // Recipe description
           recipeContainer.addEventListener("click", () => {
-            window.showRecipeDescription(recipeid, name)
+            window.showRecipeDescription(recipeid, name, true)
           })
       })
       })

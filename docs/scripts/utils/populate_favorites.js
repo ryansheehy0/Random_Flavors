@@ -16,7 +16,7 @@ window.populateFavorites = () => {
         window.deleteFromFavorites(favoriteButton)
       // Recipe description
         favoriteButton.addEventListener("click", () => {
-          window.showRecipeDescription(favorite.id, favorite.name) 
+          window.showRecipeDescription(favorite.id, favorite.name, true) 
         })
    })
 }

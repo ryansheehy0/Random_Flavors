@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"><!-- Icons -->
         <link rel="stylesheet" type="text/css" href="./style.css" />
         <!-- JS -->
-          <script src="scripts/apis/get_random_cocktail.js" defer></script>
+            <script src="scripts/apis/get_random_drink.js" defer></script>
+          <script src="scripts/inits/random_drink_init.js" defer></script>
 
             <script src="./scripts/apis/get_recipe_info.js" defer></script>
           <script src="./scripts/utils/show_recipe_description.js" defer></script>
@@ -42,8 +43,7 @@
             <i class="icon mdi mdi-close"></i>
             <h1 class="title">Random Recipes</h1>
             <div id="random-recipes-container"></div>
-            <input id="email" type="email" placeholder="Enter you email" required>
-            <button id="send">Send</button>
+            <div id="random-drink-container"></div>
           </div>
         <!-- Recipe Description Modal -->
           <div id="recipe-modal" style="visibility: hidden"></div>

@@ -175,6 +175,10 @@ main {
     border-radius: var(--radius);
   /* Spacing */
     padding: var(--space-inside);
+  /* Sizing */
+    max-height: 75vh;
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
   /* Moving above background */
     z-index: 2;
 }
@@ -189,6 +193,7 @@ main {
 #random-recipes-modal > .title{
   padding-right: 30px; 
   margin: 0;
+  margin-bottom: var(--space-inside);
 }
 
 #random-recipes-modal > #random-recipes-container{
@@ -196,44 +201,43 @@ main {
   flex-direction: column;
 }
 
-#random-recipes-modal > #email{
-  /* Text stuff */
-    font-size: var(--font-size);
-    padding-left: 10px; 
-  /* Colors */
-    background: var(--light);
+#random-recipes-modal > #random-recipes-container > .random-favorites-button{
+  /* Color */
     color: var(--brown);
-  /* Borders */
+    background: var(--green);
+  /* Sizing */
+    width: fit-content;
+    height: var(--height);
+  /* Border */
     border-radius: var(--radius);
     border: 2px solid var(--brown);
-  /* Sizing */
-    box-sizing: border-box;
-    height: var(--height);
-    width: 350px;
-  /* Spacing */
+  /* Text and cursor */
+    cursor: pointer;
+    font-size: var(--font-size);
+    white-space: nowrap;
+  /* Spacing */ 
+    padding-left: var(--space-inside);
+    padding-right: var(--space-inside);
     margin-top: var(--space-inside);
+    margin-bottom: var(--space-inside);
 }
-#random-recipes-modal > #email:focus{
-  outline: none;
+
+#random-recipes-modal > #random-drink-container > img{
+  /* Scaling */
+    width: 400px;
+    height: auto;
+  /* Round corners */
+    border-radius: var(--radius);
+}
+
+#random-recipes-modal > #random-drink-container > li{
+  /* Remove bullet points */
+    list-style: none;
 }
 
 #random-recipes-container > h3{
   margin-top: calc(var(--space-inside) / 2);
   margin-bottom: calc(var(--space-inside) / 2);
-}
-
-#random-recipes-modal > #send{
-  /* Colors */
-    background: var(--green);
-    color: var(--brown);
-  /* Border */
-    border: 2px solid var(--brown);
-    border-radius: var(--radius);
-  /* Sizing */
-    height: var(--height);
-  /* Text */
-    font-size: var(--font-size);
-    cursor: pointer;
 }
 
 #background {

@@ -4,7 +4,7 @@ window.addToFavoritesClickInit = (recipeContainer) => {
 
   addToListIcon.addEventListener("click", (event) => {
     // Stop clicking of recipe container modal description
-      event.stopPropagation
+      event.stopPropagation()
     const recipeName = recipeContainer.querySelector(".name").textContent
     const recipeid = recipeContainer.dataset.recipeid
     // Check to make sure the added recipe isn't already in the favorites list

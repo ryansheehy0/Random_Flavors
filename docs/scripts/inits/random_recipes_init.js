@@ -4,10 +4,11 @@ window.randomRecipeInit = () => {
     const randomRecipesModal = document.querySelector("#random-recipes-modal")
     const randomRecipesModalCloseIcon = randomRecipesModal.querySelector(".mdi-close")
     const randomRecipesContainer = randomRecipesModal.querySelector("#random-recipes-container")
+    const randomDrinkContainer = randomRecipesModal.querySelector("#random-drink-container")
     const background = document.querySelector("#background")
     const bodyContainer = document.querySelector("#body-container")
   // When Random Recipes Button is pressed
-  randomRecipesBtn.addEventListener("click", () => {
+  randomRecipesBtn.addEventListener("click", async () => {
     // Variables
       const numOfRandomRecipes = 2
       let tempFavorites = [...window.favorites] // Pass by value instead of by reference
@@ -25,11 +26,21 @@ window.randomRecipeInit = () => {
     // Add the randomly chosen recipes to random recipes container
     randomRecipes.forEach(recipe => {
       randomRecipesContainer.insertAdjacentHTML("beforeend" /* Last Child */, `
-        <h3 data-recipeid="${recipe.id}">
+        <button class="random-favorites-button" data-recipeid="${recipe.id}">
           ${recipe.name}
-        </h3>
+        </button>
       `)
+      // Get newly created buttons
+        const randomFavoriteButton = document.querySelector(`.random-favorites-button[data-recipeid="${recipe.id}"]`)
+
+      // Add event listener to the buttons
+        randomFavoriteButton.addEventListener("click", () => {
+          window.showRecipeDescription(recipe.id, recipe.name, false)
+        })
     })
+
+    // Add random drink
+      await window.randomDrinkInit(randomDrinkContainer)
 
     // Blur the background
       background.style.visibility = "visible"
@@ -43,6 +54,7 @@ window.randomRecipeInit = () => {
 
   // When the close button is pressed in the random recipes modal
   randomRecipesModalCloseIcon.addEventListener("click", () => {
+    
     // Hide the background
       background.style.visibility = "hidden"
     // Hide the modal
@@ -51,5 +63,7 @@ window.randomRecipeInit = () => {
       bodyContainer.style.pointerEvents = "auto"
     // Remove the randomly chosen recipes
       randomRecipesContainer.innerHTML = ""
+    // Remove the randomly chosen drink
+      randomDrinkContainer.innerHTML = ""
   })
 }
