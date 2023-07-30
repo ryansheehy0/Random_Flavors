@@ -31,10 +31,10 @@ window.searchBarInit = () => {
         const img = recipe.image
         const recipeid = recipe.id
         searchContainer.insertAdjacentHTML("beforeend"/*Last Child*/, `
-          <div class="recipe-container" data-recipeid="${recipeid}">
+          <div class="recipe-container bg-[var(--light)] text-[var(--brown)] border-2 border-[var(--brown)] rounded-[var(--radius)] m-[var(--space-inside)] p-[var(--space-inside)] w-[312px] cursor-pointer relative" data-recipeid="${recipeid}">
             <i class="icon mdi mdi-playlist-plus"></i>
-            <h2 class="name">${name}</h2>
-            <img src="${img}" alt="${name} image">
+            <h2 class="name m-[0px] mt-[2px] text-left ml-[30px] w-[calc(100%-30px-2*var(--space-inside))] custom-font-size font-bold">${name}</h2>
+            <img class="rounded-[var(--radius)] mt-[var(--space-inside)]" src="${img}" alt="${name} image">
           </div>
         `)
         // Get newly created recipe container
