@@ -53,4 +53,4 @@ THEN I press the trash icon symbol to delete the particular item
 - Multiple cultural cuisine categories
 
 ## Credits
-We used the [Spoonacular food API](https://spoonacular.com/food-api) to obtain the recipes for the app. We also used [Tailwind CSS](https://tailwindcss.com/) as a framework.
+We used the [Spoonacular food API](https://spoonacular.com/food-api) and the [The Cocktail DB drink API](https://www.thecocktaildb.com/api.php) to obtain the recipes for the app. We also used [Tailwind CSS](https://tailwindcss.com/) as a framework.
