@@ -1,8 +1,12 @@
 # Random Flavors
 
+![An image of the app's homepage.](./docs/assets/randomrecipes_homepage.png)
+
+The website for the app can be found [here](https://ryansheehy0.github.io/Random_Flavors/).
+
 ## Description
 
-![An image of the a search being performed on the Random Flavors app. The word 'cake' appears in the search bar and several pictures of different cakes are on the screen.](./docs/assets/randomrecipes_preview.png)
+![An image of a search being performed on the Random Flavors app. The word 'cake' appears in the search bar and several pictures of different cakes are on the screen.](./docs/assets/randomrecipes_preview.png)
 
 An app to search for your favorite recipes and generate two randomly chosen recipes from your favorites list. The motivation behind this project was to create an app that makes planning weekend meals easier by recommending two randomly chosen recipes - one for each day of the weekend - for the user to gather ingredients for and make.
 
