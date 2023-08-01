@@ -1,8 +1,9 @@
 # Random Flavors
 
--insert app preview screenshot here-
-
 ## Description
+
+![An image of the homepage of the Random Flavors app. The word 'cake' appears in the search bar and several pictures of different cakes are on the screen.](./docs/assets/randomrecipes_preview)
+
 An app to search for your favorite recipes and email two randomly chosen recipes from your favorites list. The motivation behind this project was to create an app that makes planning weekend meals easier by recommending two randomly chosen recipes - one for each day of the weekend - for the user to gather ingredients for and make.
 
 ## User Story
@@ -30,19 +31,12 @@ When I want to delete the recipe from the favorites
 
 THEN I press the trash icon symbol to delete the particular item
 
-When I finish recipe selection
-
-THEN I presented with a Modal with Email  form input 
-
-WHEN i fill the Email form input with an Email
-
-THEN I an Email has be sent to Email address provided
-
 ## Minimum Viable Product
 - Search for recipes you like
 - Add them to favorites 
 - Randomly generate two recipes from favorites list upon request (in the form of pushing a button)
-- Email ingredients list and recipe instructions to user email address (email address input by user)
+
+![An image of the results of pushing the 'Random Flavors' button. Two recipes - cake batter chocolates and beef carrot stew - are displayed in a popup modal titled Random Recipes. Below the two recipes, a random drink - London town - is also displayed.](./docs/assets/randomrecipes_preview2)
 
 ## Features to add later
 - Extend the days. More than 2 days.
@@ -55,4 +49,4 @@ THEN I an Email has be sent to Email address provided
 - Multiple cultural cuisine categories
 
 ## Credits
-We used the Spoonacular food API (https://spoonacular.com/food-api) to obtain the recipes for the app. We also used Tailwind CSS (https://tailwindcss.com/) as a framework.
+We used the [Spoonacular food API](https://spoonacular.com/food-api) to obtain the recipes for the app. We also used [Tailwind CSS](https://tailwindcss.com/) as a framework.
