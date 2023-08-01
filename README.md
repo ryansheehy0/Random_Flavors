@@ -1,7 +1,9 @@
 # Random Flavors
 
+-insert app preview screenshot here-
+
 ## Description
-An app to search for your favorite recipes and email two randomly chosen recipes from your favorites list.
+An app to search for your favorite recipes and email two randomly chosen recipes from your favorites list. The motivation behind this project was to create an app that makes planning weekend meals easier by recommending two randomly chosen recipes - one for each day of the weekend - for the user to gather ingredients for and make.
 
 ## User Story
 AS A human who consumes food 
@@ -37,10 +39,10 @@ WHEN i fill the Email form input with an Email
 THEN I an Email has be sent to Email address provided
 
 ## Minimum Viable Product
-1. Search for recipes you like
-1. Add them to favorites 
-1. Randomly generate two recipes from favorites list upon request (in the form of pushing a button)
-1. Email ingredients list and recipe instructions to user email address (email address input by user)
+- Search for recipes you like
+- Add them to favorites 
+- Randomly generate two recipes from favorites list upon request (in the form of pushing a button)
+- Email ingredients list and recipe instructions to user email address (email address input by user)
 
 ## Features to add later
 - Extend the days. More than 2 days.
@@ -49,3 +51,8 @@ THEN I an Email has be sent to Email address provided
 - Festive recipes for holidays/events
 - Outdoor food recipes like bbq or campfire food 
 - Recipes for diets (low carb, Keto, etc.)
+- Add logo/mascot
+- Multiple cultural cuisine categories
+
+## Credits
+We used the Spoonacular food API (https://spoonacular.com/food-api) to obtain the recipes for the app. We also used Tailwind CSS (https://tailwindcss.com/) as a framework.
