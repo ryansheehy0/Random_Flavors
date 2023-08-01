@@ -2,7 +2,7 @@
 
 ## Description
 
-![An image of the a search being performed on the Random Flavors app. The word 'cake' appears in the search bar and several pictures of different cakes are on the screen.](./docs/assets/randomrecipes_preview)
+![An image of the a search being performed on the Random Flavors app. The word 'cake' appears in the search bar and several pictures of different cakes are on the screen.](./docs/assets/randomrecipes_preview.png)
 
 An app to search for your favorite recipes and generate two randomly chosen recipes from your favorites list. The motivation behind this project was to create an app that makes planning weekend meals easier by recommending two randomly chosen recipes - one for each day of the weekend - for the user to gather ingredients for and make.
 
@@ -36,7 +36,7 @@ THEN I press the trash icon symbol to delete the particular item
 - Add them to favorites 
 - Randomly generate two recipes from favorites list upon request (in the form of pushing a button)
 
-![An image of the results of pushing the 'Random Flavors' button. Two recipes - cake batter chocolates and beef carrot stew - are displayed in a popup modal titled Random Recipes. Below the two recipes, a random drink - London town - is also displayed.](./docs/assets/randomrecipes_preview2)
+![An image of the results of pushing the 'Random Flavors' button. Two recipes - cake batter chocolates and beef carrot stew - are displayed in a popup modal titled Random Recipes. Below the two recipes, a random drink - London town - is also displayed.](./docs/assets/randomrecipes_preview2.png)
 
 ## Features to add later
 - Extend the days. More than 2 days.
