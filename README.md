@@ -13,21 +13,31 @@ I WANT to generate a list of recipes for the weekend
 SO THAT I can make my shopping and cooking easier on weekends.
 
 ## Acceptance Criteria
-GIVEN A Random Flavors app with a form input
-WHEN I search for a recipe,
-THEN I am presented with the recipes associated with input data,.
+
+GIVEN A Random Flavors with a form input
+
+WHEN I search for a recipe.
+
+THEN I am presented with the recipes associated with input data.
+
 THEN I select a recipe and add to the favorites.
-WHEN I click on the recipe, 
-THEN I am presented with a modal containing recipe instructions.
-WHEN I want to delete the recipe from the favorites,
-THEN I press the trash icon symbol to delete the particular item,
-THEN the item is deleted from favorites.
-WHEN I finish recipe selection,
-THEN I click on the “Send Email” button,
-THEN I am presented with a modal with an email form input.
-WHEN I fill the email form input with an email address,
-THEN an email will be sent to the email address provided.
-              
+
+WHEN I click on the recipe 
+
+THEN I presented with a modal for recipe instruction with X   symbol on the top right  for close the modal
+
+When I want to delete the recipe from the favorites
+
+THEN I press the trash icon symbol to delete the particular item
+
+When I finish recipe selection
+
+THEN I presented with a Modal with Email  form input 
+
+WHEN i fill the Email form input with an Email
+
+THEN I an Email has be sent to Email address provided
+
 ## Minimum Viable Product
 - Search for recipes you like
 - Add them to favorites 

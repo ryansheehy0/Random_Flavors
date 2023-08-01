@@ -1,9 +1,8 @@
 :root{
   /* Colors */
-  --light: rgba(221, 204, 160, 0.9);
+  --light: rgba(221, 204, 160, 1);
   --brown: rgba(45, 44, 49, 1);
-  --green: rgba(132, 136, 101, 0.9);
-  --red: rgba(107, 40, 34, 0.9);
+  --green: rgba(132, 136, 101, 1);
 
   /* Other settings */
   --radius: 12px;
@@ -13,135 +12,8 @@
   --space-inside: 10px; /* Space inside the boxes */
 }
 
-body{
-  /* Background: */
-    background-image: url("./assets/background_img.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  /* Font */
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-nav{
-  /* Flex */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  /* Padding */
-    padding-top: var(--space-between);
-    padding-bottom: var(--space-between);
-}
-#search{
-  flex: 2;
-  /* Spacing */
-    margin-left: var(--space-between);
-    margin-right: var(--space-between);
-  /* Text stuff */
-    padding-left: 30px; /* Move the text to the right a bit */
-    font-size: var(--font-size);
-  /* Colors */
-    background: var(--light);
-    color: var(--brown);
-  /* Sizing */
-    box-sizing: border-box;
-    height: var(--height);
-    padding-top: 0;
-    padding-bottom: 0;
-  /* Border */
-    border: 2px solid var(--brown);
-    border-radius: var(--radius);
-}
-#search:focus{
-  outline: none;
-}
-
-#random-recipes{
-  /* Color */
-    color: var(--brown);
-    background: var(--green);
-  /* Border */
-    border-radius: var(--radius);
-    border: 2px solid var(--brown);
-  /* Sizing */
-    height: var(--height);
-  /* Text and cursor */
-    font-size: var(--font-size);
-    cursor: pointer;
-  /* Spacing */
-    margin-right: var(--space-between);
-    padding-left: var(--space-inside);
-    padding-right: var(--space-inside);
-}
-
-main {
-  display: flex;
-}
-
-#favorite-container{
-  /* Spacing */
-    margin: var(--space-between);
-    padding: var(--space-inside);
-  /* Flex */
-    display: flex;
-    flex-direction: column;
-  /* Border */
-    border: 2px solid var(--brown);
-    border-radius: var(--radius);
-  /* Colors */
-    background: var(--light);
-    color: var(--brown);
-  /* Size */
-    height: fit-content;
-    width: fit-content;
-}
-#favorite-title{
-  margin-top: var(--space-inside);
-  margin-bottom: var(--space-inside);
-}
-.favorite-buttons{
-  /* Color */
-    color: var(--brown);
-    background: var(--green);
-  /* Sizing */
-    width: fit-content;
-    height: var(--height);
-  /* Border */
-    border-radius: var(--radius);
-    border: 2px solid var(--brown);
-  /* Text and cursor */
-    cursor: pointer;
-    font-size: var(--font-size);
-    white-space: nowrap;
-  /* Spacing */ 
-    padding-left: var(--space-inside);
-    padding-right: var(--space-inside);
-    margin: var(--space-inside);
-}
-
-#search-container{
-  margin: var(--space-between);
-  display: flex;
-  flex-wrap: wrap;
-  /* Used to align vertically with favorites card */
-    position: relative;
-      top: calc(-1 * var(--space-inside));
-}
-
-.recipe-container{
-  /* Color */
-    background: var(--light);
-    color: var(--brown);
-  /* Border */
-    border: 2px solid var(--brown);
-    border-radius: var(--radius);
-  /* Spacing */
-    margin: var(--space-inside);
-    padding: var(--space-inside);
-  /* Sizing */
-    width: 312px;
-  cursor: pointer;
-  position: relative;
+.custom-font-size{
+  font-size: var(--font-size);
 }
 
 .recipe-container > .icon{
@@ -149,21 +21,16 @@ main {
   font-size: 1.6rem;
 }
 
-.recipe-container > .name{
-  margin: 0;
-  text-align: left;
-  /* Allows spacing for add to list icon */
-    margin-left: 30px;
-    width: calc(100% - 30px - 2 * var(--space-inside));
+#random-recipes-modal > .icon{
+  position: absolute;
+    right: var(--space-inside);
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
-.recipe-container > img{
-  border-radius: var(--radius);
-  margin-top: var(--space-inside);
+#recipe-modal > .mdi-close{
+  position: absolute;
+    right: var(--space-inside);
+  font-size: 1.6rem;
+  cursor: pointer;
 }
-
-/* Delete modal CSS */
-  /* Position: fixed */
-  /* Center delete modal */
-    /* Top, left, transform: translate() */
-  /* Other styling */

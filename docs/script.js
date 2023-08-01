@@ -1,8 +1,5 @@
-// Importing
-const recipe_info = window.recipe_info
-const recipe_search = window.recipe_search
-
-const apiKey = "6f95dd3a57c24cb6af74c79f296655c2" //spoonacular
+window.spoonacularApiKey = "6f95dd3a57c24cb6af74c79f296655c2"
+window.emailApiKey = "38a904ecb7msh0bc540f8136b846p140410jsnf829c39fd221"
 
 // Setting favorites list
   // Get the favorites from the local storage
@@ -10,13 +7,10 @@ const apiKey = "6f95dd3a57c24cb6af74c79f296655c2" //spoonacular
   if(favorites === null){// Nothing in local storage
     favorites = []
   }
-  window.reset_favorites.resetFavorites()
+  window.populateFavorites()
 
-recipe_info.getRecipeInfo("654959", apiKey).then(recipe => console.log(recipe))
-recipe_search.search("pasta", apiKey)
-
-// Get the search bar
-// Add event listener submit event and if that doesn't work use keycode for enter
-  // Get the text from search from value 
-  // Check if there is text
-  // Pass to search function
+// Inits
+  // Set random recipes button and modal event listeners
+    window.randomRecipeInit()
+  // Allow searching in the search bar
+    window.searchBarInit()

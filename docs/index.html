@@ -6,27 +6,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css"><!-- Icons -->
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" type="text/css" href="./style.css" />
         <!-- JS -->
-          <script src="scripts/send_email.js" defer></script>
-          <script src="scripts/delete_from_list.js" defer></script>
-          <script src="scripts/recipe_info.js" defer></script>
-              <script src="scripts/reset_favorites.js" defer></script>
-            <script src="scripts/add_to_list.js" defer></script>
-          <script src="scripts/recipe_search.js" defer></script>
+            <script src="scripts/apis/get_random_drink.js" defer></script>
+          <script src="scripts/inits/random_drink_init.js" defer></script>
+
+            <script src="./scripts/apis/get_recipe_info.js" defer></script>
+          <script src="./scripts/utils/show_recipe_description.js" defer></script>
+
+          <script src="./scripts/inits/delete_from_favorites.js" defer></script>
+        <script src="./scripts/utils/populate_favorites.js" defer></script>
+        <script src="./scripts/inits/random_recipes_init.js" defer></script>
+          <script src="./scripts/apis/get_recipe_search.js" defer></script>
+          <script src="./scripts/inits/add_to_favorites_click_init.js" defer></script>
+        <script src="./scripts/inits/search_bar_init.js" defer></script>
+
         <script src="script.js" defer></script>
     </head>
-    <body> <!-- Contains the visible content -->
-      <nav>
-        <input id="search" type="text" placeholder="Search">
-        <button id="random-recipes">Random Recipes</button>
-      </nav>
-      <main>
-        <div id="favorite-container">
-          <h2 id="favorite-title">Favorites</h2>
-        </div>
-        <div id="search-container"></div>
-      </main>
-      <!-- Delete Modal HTML style="visibility: hidden"-->
+    <body class="bg-[url('./assets/background_img.jpg')] bg-center bg-no-repeat bg-cover font-sans"> <!-- Contains the visible content -->
+      <div id="body-container">
+        <nav class="flex justify-center items-center py-[var(--space-between)]">
+          <input class="flex-1 ml-[var(--space-between)] mr-[var(--space-between)] custom-font-size bg-[var(--light)] text-[var(--brown)] box-border h-[var(--height)] border-2 border-[var(--brown)] rounded-[var(--radius)] focus:outline-none placeholder-[#777777]" id="search" style="padding-left: 30px;" type="text" placeholder="Search">
+          <button class="text-[var(--brown)] bg-[var(--green)] rounded-[var(--radius)] border-2 border-[var(--brown)] h-[var(--height)] custom-font-size mr-[var(--space-between)] px-[var(--space-inside)]" id="random-recipes">Random Recipes</button>
+        </nav>
+        <main class="flex">
+          <div class="m-[var(--space-between)] p-[var(--space-inside)] flex flex-col border-2 border-[var(--brown)] rounded-[var(--radius)] bg-[var(--light)] text-[var(--brown)] h-fit w-fit" id="favorite-container">
+          </div>
+          <div class="m-[var(--space-between)] flex flex-wrap relative top-[calc(-1*var(--space-inside))]" id="search-container"></div>
+        </main>
+      </div>
+      <!-- Modals -->
+        <div class="w-[100vw] h-[100vh] fixed top-[0] left-[0] z-[1] bg-[rgba(0,0,0,0.5)]" id="background" style="visibility: hidden;"></div>
+        <!-- Random Recipes -->
+          <div class="fixed top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] bg-[var(--light)] text-[var(--brown)] border-2 border-[var(--brown)] rounded-[var(--radius)] p-[var(--space-inside)] max-h-[75vh] overflow-y-scroll z-[2]" id="random-recipes-modal" style="visibility: hidden; scrollbar-color: transparent transparent;">
+            <i class="icon mdi mdi-close"></i>
+            <h1 class="title pr-[30px] m-[0] mb-[var(--space-inside)] text-3xl font-bold">Random Recipes</h1>
+            <div class="flex flex-col" id="random-recipes-container"></div>
+            <div id="random-drink-container"></div>
+          </div>
+        <!-- Recipe Description Modal -->
+          <div class="fixed top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] bg-[var(--light)] text-[var(--brown)] border-2 border-[var(--brown)] rounded-[var(--radius)] p-[var(--space-inside)] h-fit max-h-[70vh] overflow-y-scroll custom-text-size z-[2]" id="recipe-modal" style="visibility: hidden; scrollbar-color: transparent transparent;"></div>
     </body>
 </html>
